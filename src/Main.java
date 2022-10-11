@@ -12,14 +12,12 @@ private void printIsLeap(int year) {
 }
         private static void printInstallationMessage(int os, int productionYear) {
         if (!(os == 0 || os == 1 )) {
-            throw new RuntimeException("устройство поддерживаемо устройство");
+            throw new RuntimeException("устройство поддерживаемо");
         }
-        var currentYear :int = localDate.now().getYear();
+        var currentYear:int= localDate.now().getYear();
         String versionMessage = productionYear < currentYear ? "облегченную" : "";
         String osMessage = os == 0 ? "iOs" : "android";
-            System.out.println("");
-        if (os == 0){
-            if (productionYear < 2015) {
+            System.out.println();
                 System.out.printf ("Установите %s версию приложения для %s по ссылке", versionMessage, osMessage);
 
         }
